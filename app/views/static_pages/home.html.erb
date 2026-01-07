@@ -1,0 +1,30 @@
+<h1>Pexels Photo Widget</h1>
+
+<%= form_with url: root_path, method: :get, local: true do |f| %>
+  <div>
+    <%= f.label :collection_id, "Pexels Collection ID" %><br>
+    <%= f.text_field :collection_id, required: true %>
+  </div>
+
+  <div>
+    <%= f.submit "Load Photos" %>
+  </div>
+<% end %>
+
+<% if @error %>
+  <p style="color: red;"><%= @error %></p>
+<% end %>
+
+<% if @photos.present? %>
+  <hr>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <% @photos.each do |photo| %>
+      <img
+        src="<%= photo.src.medium %>"
+        alt="<%= photo.alt %>"
+        style="width: 200px; height: auto;"
+      >
+    <% end %>
+  </div>
+<% end %>
+
