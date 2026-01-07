@@ -65,4 +65,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "pexels", "~> 0.5.0"
+gem "faraday", "~> 2.0"

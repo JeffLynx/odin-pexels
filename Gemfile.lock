@@ -115,6 +115,12 @@ GEM
     erubi (1.13.1)
     et-orbi (1.4.0)
       tzinfo
+    faraday (2.14.0)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.2)
+      net-http (~> 0.5)
     ffi (1.17.3-aarch64-linux-gnu)
     ffi (1.17.3-aarch64-linux-musl)
     ffi (1.17.3-arm-linux-gnu)
@@ -177,6 +183,8 @@ GEM
     minitest (6.0.1)
       prism (~> 1.5)
     msgpack (1.8.0)
+    net-http (0.9.1)
+      uri (>= 0.11.1)
     net-imap (0.6.2)
       date
       net-protocol
@@ -213,8 +221,6 @@ GEM
     parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
-    pexels (0.5.0)
-      requests (~> 1.0.2)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -278,7 +284,6 @@ GEM
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
-    requests (1.0.2)
     rexml (3.4.4)
     rubocop (1.82.1)
       json (~> 2.3)
@@ -404,11 +409,11 @@ DEPENDENCIES
   bundler-audit
   capybara
   debug
+  faraday (~> 2.0)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
   kamal
-  pexels (~> 0.5.0)
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.1)
